@@ -26,8 +26,6 @@
 		0897D03D2665248300F39429 /* ApplicationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897D03C2665248300F39429 /* ApplicationReducer.swift */; };
 		08AAE72A234D29AC008BA67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AAE729234D29AC008BA67A /* AppDelegate.swift */; };
 		08AAE72C234D29AC008BA67A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AAE72B234D29AC008BA67A /* SceneDelegate.swift */; };
-		08AAE730234D29AF008BA67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AAE72F234D29AF008BA67A /* Assets.xcassets */; };
-		08AAE733234D29AF008BA67A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AAE732234D29AF008BA67A /* Preview Assets.xcassets */; };
 		08AAE736234D29AF008BA67A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AAE734234D29AF008BA67A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -53,11 +51,8 @@
 		08AAE726234D29AC008BA67A /* ReMVVMSampleSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReMVVMSampleSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AAE729234D29AC008BA67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08AAE72B234D29AC008BA67A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08AAE72F234D29AF008BA67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08AAE732234D29AF008BA67A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08AAE735234D29AF008BA67A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08AAE737234D29AF008BA67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08B8F4F025596C4E004772D0 /* SwiftUITest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUITest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,24 +151,13 @@
 			children = (
 				0897927C265D3F9900ADF16C /* State */,
 				08979270265D3DDA00ADF16C /* Views */,
-				08B8F4F025596C4E004772D0 /* SwiftUITest.entitlements */,
 				08AAE729234D29AC008BA67A /* AppDelegate.swift */,
 				0849D98723550B7000C97CD7 /* README.md */,
 				08AAE72B234D29AC008BA67A /* SceneDelegate.swift */,
-				08AAE72F234D29AF008BA67A /* Assets.xcassets */,
 				08AAE734234D29AF008BA67A /* LaunchScreen.storyboard */,
 				08AAE737234D29AF008BA67A /* Info.plist */,
-				08AAE731234D29AF008BA67A /* Preview Content */,
 			);
 			path = ReMVVMSampleSwiftUI;
-			sourceTree = "<group>";
-		};
-		08AAE731234D29AF008BA67A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				08AAE732234D29AF008BA67A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AAE736234D29AF008BA67A /* LaunchScreen.storyboard in Resources */,
-				08AAE733234D29AF008BA67A /* Preview Assets.xcassets in Resources */,
-				08AAE730234D29AF008BA67A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +392,6 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftUITest/SwiftUITest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_ASSET_PATHS = "\"ReMVVMSampleSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = BNNC5BM8J5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ReMVVMSampleSwiftUI/Info.plist;
@@ -434,7 +415,6 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftUITest/SwiftUITest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_ASSET_PATHS = "\"ReMVVMSampleSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = BNNC5BM8J5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ReMVVMSampleSwiftUI/Info.plist;
