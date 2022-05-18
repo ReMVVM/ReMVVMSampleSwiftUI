@@ -60,7 +60,7 @@ struct CounterView: View {
                     Text("Show profile tab")
                 }
             }
-        }
+        }.navigationTitle("View: \(viewModel.id)")
     }
 }
 
