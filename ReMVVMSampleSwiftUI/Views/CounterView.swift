@@ -30,13 +30,19 @@ struct CounterView: View {
                 }
             }.padding(.bottom)
 
-            VStack {
+            VStack(spacing: 10) {
                 Text("Navigation: -> new CounterView")
                 Button(action: dispatcher[Push(with: CounterView())]) {
                     Text("Push new")
                 }
                 Button(action: dispatcher[Pop()]) {
                     Text("Pop")
+                }
+                Button(action: dispatcher[Pop(mode: .pop(3))]) {
+                    Text("Pop3")
+                }
+                Button(action: dispatcher[Pop(mode: .popToRoot)]) {
+                    Text("Pop to root")
                 }
                 Button(action: dispatcher[ShowModal(view: CounterView())]) {
                     Text("Show new on modal")
