@@ -80,7 +80,8 @@ struct CounterView: View {
                     }
                 }
             }
-        }.navigationTitle("View: \(viewModel.id)")
+        }
+        .navigationTitle("View: \(viewModel.id)")
     }
 }
 
