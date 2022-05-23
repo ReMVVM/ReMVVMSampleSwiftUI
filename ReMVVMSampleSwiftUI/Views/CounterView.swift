@@ -32,32 +32,41 @@ struct CounterView: View {
 
             VStack(spacing: 10) {
                 Text("Navigation: -> new CounterView")
-                Button(action: dispatcher[Push(with: CounterView())]) {
-                    Text("Push new")
+                VStack(spacing: 10) {
+                    Button(action: dispatcher[Push(with: CounterView())]) {
+                        Text("Push new")
+                    }
+                    Button(action: dispatcher[Pop()]) {
+                        Text("Pop")
+                    }
+                    Button(action: dispatcher[Pop(mode: .pop(3))]) {
+                        Text("Pop3")
+                    }
+                    Button(action: dispatcher[Pop(mode: .popToRoot)]) {
+                        Text("Pop to root")
+                    }
                 }
-                Button(action: dispatcher[Pop()]) {
-                    Text("Pop")
+                VStack(spacing: 10) {
+                    Button(action: dispatcher[ShowModal(view: CounterView())]) {
+                        Text("Show new on modal")
+                    }
+                    Button(action: dispatcher[ShowModal(view: CounterView(), navigation: true)]) {
+                        Text("Show new on modal with nav")
+                    }
+                    Button(action: dispatcher[DismissModal()]) {
+                        Text("Dismiss modal")
+                    }
+                    Button(action: dispatcher[DismissModal(dismissAllViews: true)]) {
+                        Text("Dismiss all modals")
+                    }
                 }
-                Button(action: dispatcher[Pop(mode: .pop(3))]) {
-                    Text("Pop3")
-                }
-                Button(action: dispatcher[Pop(mode: .popToRoot)]) {
-                    Text("Pop to root")
-                }
-                Button(action: dispatcher[ShowModal(view: CounterView())]) {
-                    Text("Show new on modal")
-                }
-                Button(action: dispatcher[ShowModal(view: CounterView(), navigation: true)]) {
-                    Text("Show new on modal with nav")
-                }
-                Button(action: dispatcher[DismissModal()]) {
-                    Text("Dismiss modal")
-                }
-                Button(action: dispatcher[Show(on: Navigation.root, view: CounterView())]) {
-                    Text("Show new on root")
-                }
-                Button(action: dispatcher[NavigationTab.profile.action]) {
-                    Text("Show profile tab")
+                VStack(spacing: 10) {
+                    Button(action: dispatcher[Show(on: Navigation.root, view: CounterView())]) {
+                        Text("Show new on root")
+                    }
+                    Button(action: dispatcher[NavigationTab.profile.action]) {
+                        Text("Show profile tab")
+                    }
                 }
             }
         }.navigationTitle("View: \(viewModel.id)")
