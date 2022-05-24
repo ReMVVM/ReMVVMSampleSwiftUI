@@ -26,9 +26,7 @@ struct ReMVVMSampleSwiftUIApp: App {
 #if DEBUG
 struct ReMVVMSampleSwiftUIAppPreview: PreviewProvider {
     static var previews: some View {
-        Group {
-            MainView().source(with: AppConfigurator.setupStore())
-        }
+        MainView().source(with: AppConfigurator.setupStore())
     }
 }
 #endif
