@@ -28,6 +28,7 @@
 		E53086792833EE1500F0921D /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = E53086782833EE1500F0921D /* ReMVVMCore */; };
 		E530867B2833EE1500F0921D /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E530867A2833EE1500F0921D /* ReMVVMSwiftUI */; };
 		E530867E2833EECD00F0921D /* ReMVVMExt in Frameworks */ = {isa = PBXBuildFile; productRef = E530867D2833EECD00F0921D /* ReMVVMExt */; };
+		E5438F90283D2D38007134E2 /* NavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5438F8F283D2D38007134E2 /* NavigationItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		E53086732833ECC300F0921D /* ReMVVMSampleSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMVVMSampleSwiftUIApp.swift; sourceTree = "<group>"; };
 		E53086752833ECDF00F0921D /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		E530867C2833EEB200F0921D /* ReMVVMExtSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ReMVVMExtSwiftUI; path = ../ReMVVMExtSwiftUI; sourceTree = "<group>"; };
+		E5438F8F283D2D38007134E2 /* NavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				08979290265D425800ADF16C /* NavigationAction.swift */,
 				08979292265D426A00ADF16C /* NavigationMiddleware.swift */,
 				08979294265D428700ADF16C /* NavigationTab.swift */,
+				E5438F8F283D2D38007134E2 /* NavigationItemView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				08979280265D409C00ADF16C /* UserState.swift in Sources */,
 				08979293265D426A00ADF16C /* NavigationMiddleware.swift in Sources */,
 				0897928D265D420F00ADF16C /* CounterAction.swift in Sources */,
+				E5438F90283D2D38007134E2 /* NavigationItemView.swift in Sources */,
 				08979278265D3EF000ADF16C /* LoginView.swift in Sources */,
 				08979282265D40AC00ADF16C /* UserAction.swift in Sources */,
 				0897927E265D407A00ADF16C /* ApplicationState.swift in Sources */,

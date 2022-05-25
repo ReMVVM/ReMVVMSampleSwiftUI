@@ -11,7 +11,6 @@ import ReMVVMExt
 import SwiftUI
 
 enum NavigationTab: String, TabNavigationItem, CaseIterableNavigationItem {
-
     case home = "Home"
     case tests = "Tests"
     case profile = "Profile"
@@ -25,15 +24,10 @@ enum NavigationTab: String, TabNavigationItem, CaseIterableNavigationItem {
         }
     }
 
-    public var tabItemFactory: () -> AnyView {
+    @ViewBuilder public var tabItemFactory: AnyView {
         switch self {
-        default: return
-            {
-                HStack {
-                    Text(rawValue)
-                    Image(uiImage: .add)
-                }.any
-            }
+        default: NavigationItemView(tab: self).any
         }
     }
 }
+
