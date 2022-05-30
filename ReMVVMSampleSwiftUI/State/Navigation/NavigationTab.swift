@@ -24,9 +24,9 @@ enum NavigationTab: String, TabNavigationItem, CaseIterableNavigationItem {
         }
     }
 
-    @ViewBuilder public var tabItemFactory: AnyView {
+    public var tabItemFactory: () -> AnyView {
         switch self {
-        default: NavigationItemView(tab: self).any
+        default: return { NavigationItemView(tab: self).any }
         }
     }
 }
