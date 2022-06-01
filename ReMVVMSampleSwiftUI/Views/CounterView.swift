@@ -45,6 +45,9 @@ struct CounterView: View {
                     Button(action: dispatcher[Pop(mode: .popToRoot)]) {
                         Text("Pop to root")
                     }
+                    SAButton(action: Pop(mode: .popToRoot)) {
+                        Text("Pop to root")
+                    }
                 }
                 VStack(spacing: 3) {
                     Button(action: dispatcher[ShowModal(view: CounterView(), presentationStyle: .sheet)]) {
@@ -82,6 +85,22 @@ struct CounterView: View {
             }
         }
         .navigationTitle("View: \(viewModel.id)")
+    }
+}
+
+struct SAButton<Label>: View where Label: View {
+    @ReMVVM.Dispatcher private var dispatcher
+
+    private let action: StoreAction
+    private let label: () -> Label
+
+    var body: some View {
+        Button(action: { dispatcher.dispatch(action: action) }, label: label)
+    }
+
+    public init(action: StoreAction, @ViewBuilder label: @escaping () -> Label) {
+        self.action = action
+        self.label = label
     }
 }
 

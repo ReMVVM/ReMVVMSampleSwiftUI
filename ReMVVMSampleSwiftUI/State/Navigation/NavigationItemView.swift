@@ -11,9 +11,9 @@ import SwiftUI
 struct NavigationItemView: View {
     public let tab: NavigationTab
     var body: some View {
-        HStack {
-            Text(tab.rawValue)
+        VStack {
             Image(uiImage: .add)
+            Text(tab.rawValue)
         }
     }
 }
