@@ -18,11 +18,9 @@ struct AppConfigurator {
         let mappers: [StateMapper<ApplicationState>] = [StateMapper(for: \.counter),
                                                         StateMapper(for: \.user)]
 
-        let tabBarConfig = NavigationConfig(tabBarFactory: { items, selectedIndex in
-            TestTabBar(items: items, selectedIndex: selectedIndex).any
-        })
+        let tabBarConfig = NavigationConfig(tabBarFactory: { TestTabBar(items: $0, selectedIndex: $1) })
 
-        let uiStateConfig = UIStateConfig(navigationConfigs: tabBarConfig)
+        let uiStateConfig = UIStateConfig(navigationConfig: tabBarConfig)
 
         let store = ReMVVM.initialize(with: .initial,
                                       stateMappers: mappers,
@@ -36,13 +34,13 @@ struct AppConfigurator {
 }
 
 private struct TestTabBar: View {
-    var items: [AnyView]
-    @Binding var selectedIndex: Int
+    var items: [TabNavigationItem]
+    @Binding var selectedIndex: Int?
 
     var body: some View {
         HStack {
             ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
-                item
+                item.tabItemFactory()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onTapGesture {
                         withAnimation(.easeOut(duration: 0.2)) {
@@ -53,6 +51,6 @@ private struct TestTabBar: View {
             }
         }
         .background(Color.red)
-        .frame(height: 90)
+        .frame(height: 40)
     }
 }
