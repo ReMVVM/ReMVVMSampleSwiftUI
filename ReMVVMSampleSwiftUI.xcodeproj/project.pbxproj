@@ -27,9 +27,9 @@
 		E53086762833ECDF00F0921D /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53086752833ECDF00F0921D /* AppConfigurator.swift */; };
 		E53086792833EE1500F0921D /* ReMVVMCore in Frameworks */ = {isa = PBXBuildFile; productRef = E53086782833EE1500F0921D /* ReMVVMCore */; };
 		E530867B2833EE1500F0921D /* ReMVVMSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E530867A2833EE1500F0921D /* ReMVVMSwiftUI */; };
-		E530867E2833EECD00F0921D /* ReMVVMExt in Frameworks */ = {isa = PBXBuildFile; productRef = E530867D2833EECD00F0921D /* ReMVVMExt */; };
 		E5438F90283D2D38007134E2 /* NavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5438F8F283D2D38007134E2 /* NavigationItemView.swift */; };
 		E5A7209028A5317500FB13E8 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7208F28A5317500FB13E8 /* NavigationBarView.swift */; };
+		E5A7209328A53F8C00FB13E8 /* ReMVVMExt in Frameworks */ = {isa = PBXBuildFile; productRef = E5A7209228A53F8C00FB13E8 /* ReMVVMExt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +54,7 @@
 		08AAE737234D29AF008BA67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53086732833ECC300F0921D /* ReMVVMSampleSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMVVMSampleSwiftUIApp.swift; sourceTree = "<group>"; };
 		E53086752833ECDF00F0921D /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
-		E530867C2833EEB200F0921D /* ReMVVMExtSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ReMVVMExtSwiftUI; path = ../ReMVVMExtSwiftUI; sourceTree = "<group>"; };
 		E5438F8F283D2D38007134E2 /* NavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemView.swift; sourceTree = "<group>"; };
-		E54E4E8C2885E6150014A044 /* sbiosshared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = sbiosshared; path = ../sbiosshared; sourceTree = "<group>"; };
 		E5A7208F28A5317500FB13E8 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,7 @@
 			files = (
 				E53086792833EE1500F0921D /* ReMVVMCore in Frameworks */,
 				E530867B2833EE1500F0921D /* ReMVVMSwiftUI in Frameworks */,
-				E530867E2833EECD00F0921D /* ReMVVMExt in Frameworks */,
+				E5A7209328A53F8C00FB13E8 /* ReMVVMExt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +75,6 @@
 		086FEE0E23BD23BE007E82E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E54E4E8C2885E6150014A044 /* sbiosshared */,
-				E530867C2833EEB200F0921D /* ReMVVMExtSwiftUI */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,7 +200,7 @@
 			packageProductDependencies = (
 				E53086782833EE1500F0921D /* ReMVVMCore */,
 				E530867A2833EE1500F0921D /* ReMVVMSwiftUI */,
-				E530867D2833EECD00F0921D /* ReMVVMExt */,
+				E5A7209228A53F8C00FB13E8 /* ReMVVMExt */,
 			);
 			productName = SwiftUITest;
 			productReference = 08AAE726234D29AC008BA67A /* ReMVVMSampleSwiftUI.app */;
@@ -236,6 +232,7 @@
 			mainGroup = 08AAE71D234D29AC008BA67A;
 			packageReferences = (
 				E53086772833EE1500F0921D /* XCRemoteSwiftPackageReference "ReMVVM" */,
+				E5A7209128A53F8C00FB13E8 /* XCRemoteSwiftPackageReference "ReMVVMExtSwiftUI" */,
 			);
 			productRefGroup = 08AAE727234D29AC008BA67A /* Products */;
 			projectDirPath = "";
@@ -481,6 +478,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		E5A7209128A53F8C00FB13E8 /* XCRemoteSwiftPackageReference "ReMVVMExtSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReMVVM/ReMVVMExtSwiftUI";
+			requirement = {
+				branch = feature/refactoring;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,8 +499,9 @@
 			package = E53086772833EE1500F0921D /* XCRemoteSwiftPackageReference "ReMVVM" */;
 			productName = ReMVVMSwiftUI;
 		};
-		E530867D2833EECD00F0921D /* ReMVVMExt */ = {
+		E5A7209228A53F8C00FB13E8 /* ReMVVMExt */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = E5A7209128A53F8C00FB13E8 /* XCRemoteSwiftPackageReference "ReMVVMExtSwiftUI" */;
 			productName = ReMVVMExt;
 		};
 /* End XCSwiftPackageProductDependency section */
