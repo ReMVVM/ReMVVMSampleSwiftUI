@@ -17,7 +17,7 @@ struct NavigationBarView: View {
     var body: some View {
         HStack {
             ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
-                item.tabItemFactory()
+                item.tabItemFactory(false)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onTapGesture {
                         withAnimation(.easeOut(duration: 0.2)) {
